@@ -1,10 +1,10 @@
 <h2>Nearest Electic Charging Stations</h2>
 
-<% @stations.each do |station| %>
+<% search_results.stations.each do |station| %>
   <ul class='station'>
-    <p class='name'><strong><%= station[:station_name] %></strong></p>
-    <p class='street-address'><%= station[:street_address] %></p>
-    <p class='city-state-zip'><%= station[:city] %>, <%= station[:state] %> <%= station[:zip] %></p>
-    <p class='distance'>Distance: <%= station[:distance] %> miles</p>
+    <p class='name'><strong><%= station.station_name %></strong></p>
+    <p class='street-address'><%= station.street_address %></p>
+    <p class='city-state-zip'><%= station.city %>, <%= station.state %> <%= station.zip %></p>
+    <p class='distance'>Distance: <%= station.distance %> miles</p>
   </ul><hr>
 <% end %>
