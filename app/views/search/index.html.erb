@@ -1,3 +1,10 @@
-<h2>Nearest Electic Charging Station</h2>
+<h2>Nearest Electic Charging Stations</h2>
 
 <% @stations.each do |station| %>
+  <ul class='station'>
+    <li class='name'><%= station[:station_name] %></li>
+    <li class='street-address'><%= station[:street_address] %></li>
+    <li class='state'><%= station[:state] %></li>
+    <li class='zip'><%= station[:zip] %></li>
+  </ul>
+<% end %>
