@@ -3,9 +3,5 @@ class SearchController < ApplicationController
     render locals: {
       search_results: StationSearch.new(params[:location])
     }
-
-    location = params[:location]
-
-
   end
 end
