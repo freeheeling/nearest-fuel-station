@@ -2,9 +2,9 @@
 
 <% @stations.each do |station| %>
   <ul class='station'>
-    <li class='name'><%= station[:station_name] %></li>
-    <li class='street-address'><%= station[:street_address] %></li>
-    <li class='state'><%= station[:state] %></li>
-    <li class='zip'><%= station[:zip] %></li>
-  </ul>
+    <p class='name'><strong><%= station[:station_name] %></strong></p>
+    <p class='street-address'><%= station[:street_address] %></p>
+    <p class='city-state-zip'><%= station[:city] %>, <%= station[:state] %> <%= station[:zip] %></p>
+    <p class='distance'>Distance: <%= station[:distance] %> miles</p>
+  </ul><hr>
 <% end %>
