@@ -12,13 +12,16 @@ describe Station do
       street_address: '1225 17th St.',
       city: 'Denver',
       state: 'CO',
-      zip: '80202'
+      zip: '80202',
+      distance: '0.0934'
     }
 
+    station = Station.new(attributes)
     expect(station.station_name).to eq('Seventeenth Street Plaza')
     expect(station.street_address).to eq('1225 17th St.')
     expect(station.city).to eq('Denver')
     expect(station.state).to eq('CO')
     expect(station.zip).to eq('80202')
+    expect(station.distance).to eq('0.0934')
   end
 end
