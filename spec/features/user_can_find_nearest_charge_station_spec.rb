@@ -10,7 +10,7 @@ describe 'user can select start location' do
 
     expect(current_path).to eq('/search')
 
-    expect(page).to have_content()
+    expect(page).to have_content('1225 17th St.')
   end
 end
 
@@ -22,3 +22,7 @@ end
 # Then I should see the closest electric fuel station to me.
 
 # 1331 17th St LL100, Denver, CO 80202
+
+# "station_name": "Seventeenth Street Plaza",
+# "street_address": "1225 17th St.",
+# "zip": "80202"
