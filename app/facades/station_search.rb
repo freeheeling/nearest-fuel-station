@@ -15,7 +15,10 @@ class StationSearch
 
     response = conn.get('nearest.json')
 
-    json_parsed = JSON.parse(response.body, symbolize_names: true)
-    @stations = json_parsed[:fuel_stations]
+    station_search_data = JSON.parse(response.body, symbolize_names: true)[:fuel_stations]
+
+    station_search_data.map do |station_data|
+      Station.new(station_data)
+    end
   end
 end
